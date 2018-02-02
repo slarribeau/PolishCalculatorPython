@@ -3,7 +3,7 @@ import decimal
 from  Calculator import Calculator
 
 
-class TestCalculatorWithThreeValuesTest(TestCase):
+class CalculatorWithThreeValuesTest(TestCase):
 
     def setUp(self):
         self.calculator = Calculator();
@@ -24,9 +24,9 @@ class TestCalculatorWithThreeValuesTest(TestCase):
 
     def testAccumulatorAfterSingleDrop(self):
         self.calculator.drop();
-        self.assertEquals(self.value2, self.calculator.getAccumulator());
+        self.assertEqual(self.value2, self.calculator.getAccumulator());
 
     def testAccumulatorAfterTwoDrops(self):
         self.calculator.drop();
         self.calculator.drop();
-        self.assertEquals(self.value1, self.calculator.getAccumulator());
+        self.assertEqual(self.value1, self.calculator.getAccumulator());
