@@ -1,13 +1,18 @@
+from OperandStack import OperandStack
+
 class Calculator:
+    def __init__(self):
+        self.values = OperandStack()
+
     def setAccumulator(self, value):
-        return True
+        self.values.replaceTop(value);
 
     def enter(self):
-        return True
+        self.values.push(self.getAccumulator())
 
     def drop(self):
-        return True
+        self.values.pop()
 
 
     def getAccumulator(self):
-            return 2
+        return self.values.peek()
